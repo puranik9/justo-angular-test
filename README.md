@@ -1,6 +1,11 @@
 # Angular Test for Justo
 
-The solution to the assessment was written in JavaScript with Angular, HTML, & CSS. I have provided instructions below and if you have any issues, please contact me at puranikkartik@gmail.com and I will get back to you as soon as possible.
+The coding challenge was completed using JavaScript with Angular, HTML, & CSS. I have provided instructions below and if you have any issues, please contact me at puranikkartik@gmail.com and I will get back to you as soon as possible.
+
+## Objective
+
+Create a basic Angular application which lets a user hit a button to pull in a set of posts from this fake API( https://jsonplaceholder.typicode.com/ ) 
+The API call should populate the page with a list of posts, and the user should be search the current list, alongside being able to click on any of them to open up a larger view.
 
 ## Instructions to run program
 
