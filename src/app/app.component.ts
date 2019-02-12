@@ -27,7 +27,7 @@ export class AppComponent {
   }
 
   getPosts(): void {
-    this.http.get<Post>(this.apiURL).subscribe(
+    this.http.get(this.apiURL).subscribe(
       data => this.posts.push(...data),
       (err: HttpErrorResponse) => {
         if (err.error instanceof Error) {
@@ -40,5 +40,9 @@ export class AppComponent {
 
   toggle(index): void {
     this.posts[index].clicked = !this.posts[index].clicked;
+  }
+
+  reset(): void {
+    this.posts = [];
   }
 }

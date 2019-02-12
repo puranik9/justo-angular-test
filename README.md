@@ -1,6 +1,18 @@
-# AngularTest
+# Angular Test for Justo
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+The solution to the assessment was written in JavaScript with Angular, HTML, & CSS. I have provided instructions below and if you have any issues, please contact me at puranikkartik@gmail.com and I will get back to you as soon as possible.
+
+## Instructions to run program
+
+1. Clone or Download (.zip) this repository
+2. In your terminal, cd into the `mobilelive-assessment` directory
+3. If you don't have npm installed, please do so here: `https://www.npmjs.com/get-npm`
+4. Run `npm install`
+5. Run `ng serve`
+6. Navigate to `http://localhost:4200` in your favorite browser
+7. Hit the `Get Posts` button to fetch the API data and simply wait to see the posts on your screen
+8. Hit the `Reset` button to start over
+9. Enjoy!
 
 ## Development server
 
@@ -25,3 +37,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
