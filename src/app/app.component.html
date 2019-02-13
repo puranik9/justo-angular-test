@@ -10,12 +10,12 @@
     </div>
   </div>
   <div class="app-posts_container" id="postsContainer">
-    <div class="app-post" *ngFor="let post of posts; let index = index">
+    <div class="app-post" *ngFor="let post of posts; let index = index; ">
       <div class="app-post_id">
         <h2>{{post.id}}</h2>
       </div>
       <div class="app-posts_details" (click)="this.toggle(index)">
-        <span>Posted by user/{{post.userId}} <span class="app-posts_span">{{this.getRandomNum(1, 24)}} hours ago</span></span>
+        <span>Posted by user/{{post.userId}} <span class="app-posts_span">{{getRandomNum(1, 24)}} hours ago</span></span>
         <h3>{{post.title}}</h3>
         <p>{{ !posts[index].clicked ? post.body.slice(0, 80)+'...' : post.body.slice(0)}}</p>
         <span class="downward-arrow">{{ !posts[index].clicked ? '&#8675;' : ''}}</span>

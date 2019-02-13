@@ -1,41 +1,37 @@
-import { Component, ViewChild } from '@angular/core';
-import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-
-interface Post {
-  userId: string;
-  id: string;
-  title: string;
-  body: string;
-}
+import { Component, OnInit } from '@angular/core';
+import {PostService} from './PostService';
+import {Post} from './post.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.less']
+  styleUrls: ['./app.component.less'],
+  providers: [PostService]
 })
 export class AppComponent {
 
   title = 'Angular Reddit';
-  apiURL = 'https://jsonplaceholder.typicode.com/posts';
-  posts = [];
+  posts: Post[] = [];
   clicked = false;
 
-  constructor(private http: HttpClient) { }
+  constructor(private postService: PostService) {}
 
   getRandomNum(min, max): number {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min ;
   }
 
   getPosts(): void {
-    this.http.get(this.apiURL).subscribe(
-      data => this.posts.push(...data),
-      (err: HttpErrorResponse) => {
-        if (err.error instanceof Error) {
+    this.postService.getPosts()
+    .subscribe(
+      (data: any[]) => this.posts = data,
+      error => {
+        if (error instanceof Error) {
           console.log('Client-side error occured');
         } else {
           console.log('Server-side error occured');
         }
-      });
+      }
+    );
   }
 
   toggle(index): void {
